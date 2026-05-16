@@ -5,6 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>新規受講生登録マニュアル</title>
   <style>
+    #pw-overlay {
+      position: fixed; inset: 0;
+      background: #3a3a3a;
+      display: flex; align-items: center; justify-content: center;
+      z-index: 9999;
+    }
+    #pw-box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 40px 36px;
+      text-align: center;
+      width: 320px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    }
+    #pw-box h2 { font-size: 1.1rem; margin-bottom: 6px; color: #333; }
+    #pw-box p { font-size: 0.85rem; color: #888; margin-bottom: 20px; }
+    #pw-input {
+      width: 100%; padding: 10px 14px;
+      border: 1px solid #ccc; border-radius: 6px;
+      font-size: 1rem; margin-bottom: 12px;
+      outline: none;
+    }
+    #pw-input:focus { border-color: #4a90d9; }
+    #pw-btn {
+      width: 100%; padding: 10px;
+      background: #4a90d9; color: #fff;
+      border: none; border-radius: 6px;
+      font-size: 1rem; font-weight: bold;
+      cursor: pointer;
+    }
+    #pw-btn:hover { background: #2c5f9e; }
+    #pw-error { color: #e05; font-size: 0.85rem; margin-top: 8px; display: none; }
+  </style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: "Hiragino Sans", "Meiryo", sans-serif;
@@ -453,6 +486,35 @@
 
 </div><!-- /.container -->
 <script>
+  (function() {
+    if (sessionStorage.getItem('auth') === '1') return;
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.insertAdjacentHTML('afterbegin', `
+        <div id="pw-overlay">
+          <div id="pw-box">
+            <h2>新規受講生登録マニュアル</h2>
+            <p>パスワードを入力してください</p>
+            <input id="pw-input" type="password" placeholder="パスワード" />
+            <button id="pw-btn">ログイン</button>
+            <div id="pw-error">パスワードが違います</div>
+          </div>
+        </div>
+      `);
+      function check() {
+        if (document.getElementById('pw-input').value === 'newstudents2026') {
+          sessionStorage.setItem('auth', '1');
+          document.getElementById('pw-overlay').remove();
+        } else {
+          document.getElementById('pw-error').style.display = 'block';
+        }
+      }
+      document.getElementById('pw-btn').addEventListener('click', check);
+      document.getElementById('pw-input').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') check();
+      });
+    });
+  })();
+
   function copyTemplate(btn) {
     const body = btn.closest('.template-box').querySelector('.template-body');
     const text = body.innerText;
