@@ -328,38 +328,10 @@
     <div class="flow-item">
       <div class="step-num">3</div>
       <div class="step-body">
-        <div class="step-title">Lステップにて、状況を確認する</div>
-        <ul class="detail">
-          <li>Lステップにログインする</li>
-          <li>着金確認後、営業担当者がメッセージを送信していることを確認</li>
-          <li>もし送られていない場合は、テンプレを送信する</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="flow-item">
-      <div class="step-num">4</div>
-      <div class="step-body">
-        <div class="step-title">Lステップにて、タグづけを行う <span class="sub">※振込の方は振込確認後実施</span></div>
-        <ul class="detail">
-          <li>下記、2つのタグづけをして保存する
-            <ul>
-              <li>① プログラムを受けている方全員</li>
-              <li>② 2025年4月以降受講生</li>
-            </ul>
-          </li>
-          <li>生徒管理シートのLステップ欄を「<strong>付与済み</strong>」にする</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="flow-item">
-      <div class="step-num">5</div>
-      <div class="step-body">
         <div class="step-title">「個人連絡用LINE②」から今後の流れ（ポータルサイト）を案内</div>
         <ul class="detail">
           <li>フルネーム連絡がきたら、生徒管理シートの名前と相違ないか確認して、LINE名に（フルネーム）を追加</li>
-          <li>今後の流れ（案内テンプレ）を送る</li>
+          <li>今後の流れ（案内テンプレ）を送る → <a href="https://line-template-tool.vercel.app/" target="_blank">テンプレ作成メーカー</a>で作成</li>
           <li><strong style="color:#2c5f9e;">Mikiさんインスタ経由の場合</strong>：Mikiさんの個人LINEへの登録も案内（勉強会の案内を行うため）</li>
         </ul>
         <div class="note">
@@ -370,18 +342,18 @@
     </div>
 
     <div class="flow-item">
-      <div class="step-num">6</div>
+      <div class="step-num">4</div>
       <div class="step-body">
         <div class="step-title">受講開始日を確認し、教材を案内</div>
         <ul class="detail">
-          <li>視聴完了と受講開始日の連絡がきたら、最初の教材を案内する（教材テンプレ）</li>
+          <li>視聴完了と受講開始日の連絡がきたら、最初の教材を案内する（<a href="https://line-template-tool.vercel.app/" target="_blank">テンプレ作成メーカー</a>の「開始日」）</li>
           <li>セッション希望者用のテンプレは別途使用する</li>
         </ul>
       </div>
     </div>
 
     <div class="flow-item">
-      <div class="step-num">7</div>
+      <div class="step-num">5</div>
       <div class="step-body">
         <div class="step-title">学習管理シートの作成</div>
         <ul class="detail">
@@ -395,7 +367,7 @@
     </div>
 
     <div class="flow-item">
-      <div class="step-num">8</div>
+      <div class="step-num">6</div>
       <div class="step-body">
         <div class="step-title">週報の作成</div>
         <ul class="detail">
@@ -406,7 +378,7 @@
     </div>
 
     <div class="flow-item">
-      <div class="step-num">9</div>
+      <div class="step-num">7</div>
       <div class="step-body">
         <div class="step-title">週報を学習管理シートに紐付ける</div>
         <ul class="detail">
@@ -429,11 +401,11 @@
     </div>
 
     <div class="flow-item">
-      <div class="step-num">10</div>
+      <div class="step-num">8</div>
       <div class="step-body">
         <div class="step-title">学習開始前日：学習管理シートと長期学習プランを送付する</div>
         <ul class="detail">
-          <li>学習開始前日に学習管理シート テンプレを送信する</li>
+          <li>学習開始前日に学習管理シート テンプレを送信する（<a href="https://line-template-tool.vercel.app/" target="_blank">テンプレ作成メーカー</a>の「前日案内」）</li>
           <li>生徒管理シートの「前日連絡」にチェックを入れる</li>
         </ul>
         <div class="note">
@@ -446,6 +418,11 @@
 
   <!-- ④ 初回セッション対応フロー -->
   <h2>④ 初回セッション対応フロー</h2>
+
+  <div class="info" style="margin-bottom: 24px;">
+    LINE送信用のテンプレは、<a href="https://line-template-tool.vercel.app/" target="_blank">新規受講生対応テンプレ作成メーカー</a>から<strong>「新規受講生対応テンプレ」</strong>を選択して作成してください。<br>
+    URL：<a href="https://line-template-tool.vercel.app/" target="_blank">https://line-template-tool.vercel.app/</a>
+  </div>
 
   <div class="flow">
 
@@ -463,27 +440,6 @@
       </div>
     </div>
 
-    <div class="template-box">
-      <div class="template-header">
-        <span class="template-label">案内テンプレ</span>
-        <button class="copy-btn" onclick="copyTemplate(this)">コピー</button>
-      </div>
-      <div class="template-body">
-<p>〇〇さん、ありがとうございます！<br>受講開始のサポートをさせていただく〇〇です！<br>今後の流れをご案内しますね😊</p>
-<p class="divider">ーーーーーーーーーー</p>
-<p>1️⃣ 受講生用ポータルサイトに入る<br>▼<br><a href="https://portal.masaenglishcompany.com/" target="_blank">https://portal.masaenglishcompany.com/</a></p>
-<p>2️⃣ 1番上の「プログラム開始」ボタンをタップし、6つのステップを確認する</p>
-<p>3️⃣ 受講開始日をLINEする</p>
-<p>1から6のすべてのステップに目を通し、ご不明点がなければ、以下の内容をLINEで送ってください🙏</p>
-<p class="divider">ーーーーーーーーーー<br>・全部視聴しました！<br>・受講開始日（〇月〇日）<br>ーーーーーーーーーー</p>
-<p>（※最短で明日より開始可能です）</p>
-<p><strong>【初回セッションについて】</strong><br>これからスムーズに学習を進めていくための「学習方法のご案内」や<br>「最初の不安・疑問の解消」を目的とした、最大30分のセッションです。</p>
-<p>ご契約に含まれている通常セッションとは別枠のため、追加料金はかかりません。</p>
-<p>もしご希望される場合は、以下のURLより都合の良い日時をご登録ください🙏<br>https://timerex.net/s/atop_masaenglish/bebe0c27</p>
-<p>どうぞよろしくお願いします！</p>
-      </div>
-    </div>
-
     <div class="flow-item">
       <div class="step-num">2</div>
       <div class="step-body">
@@ -491,7 +447,7 @@
         <ul class="detail">
           <li>TimeRexがチームメンバーの空き状況を確認し、<strong>担当者を自動でアサイン</strong>する</li>
           <li>Slackに自動通知が届くので、担当者はそこで内容を確認する</li>
-          <li>通知の<strong>スレッド内</strong>に、受講生へZoom接続先を送ったかどうかのコメントを残す（例：Zoomリンク送付済み）</li>
+          <li>通知の<strong>スレッド内</strong>に、スタンプでZoom送信済みと残す</li>
         </ul>
       </div>
     </div>
@@ -529,44 +485,6 @@
       <li>作成済みの学習管理シートのリンクをコピーする</li>
       <li>「フォームの回答をコピーするスプレッドシート」にリンクを貼り付ける</li>
     </ol>
-  </div>
-
-  <!-- ⑥ テンプレ集 -->
-  <h2>⑥ テンプレ集</h2>
-
-  <div class="template-box">
-    <div class="template-header">
-      <span class="template-label">案内テンプレ</span>
-      <button class="copy-btn" onclick="copyTemplate(this)">コピー</button>
-    </div>
-    <div class="template-body">
-<p>〇〇さん、ありがとうございます！<br>受講開始のサポートをさせていただく〇〇です！<br>今後の流れをご案内しますね😊</p>
-<p class="divider">ーーーーーーーーーー</p>
-<p>1️⃣ 受講生用ポータルサイトに入る<br>▼<br><a href="https://portal.masaenglishcompany.com/" target="_blank">https://portal.masaenglishcompany.com/</a></p>
-<p>2️⃣ 1番上の「プログラム開始」ボタンをタップし、6つのステップを確認する</p>
-<p>3️⃣ 受講開始日をLINEする</p>
-<p>1から6のすべてのステップに目を通し、ご不明点がなければ、以下の内容をLINEで送ってください🙏</p>
-<p class="divider">ーーーーーーーーーー<br>・全部視聴しました！<br>・受講開始日（〇月〇日）<br>ーーーーーーーーーー</p>
-<p>（※最短で明日より開始可能です）</p>
-<p><strong>【初回セッションについて】</strong><br>これからスムーズに学習を進めていくための「学習方法のご案内」や<br>「最初の不安・疑問の解消」を目的とした、最大30分のセッションです。</p>
-<p>ご契約に含まれている通常セッションとは別枠のため、追加料金はかかりません。</p>
-<p>もしご希望される場合は、以下のURLより都合の良い日時をご登録ください🙏<br>https://timerex.net/s/atop_masaenglish/bebe0c27</p>
-<p>どうぞよろしくお願いします！</p>
-    </div>
-  </div>
-
-  <div class="template-box">
-    <div class="template-header">
-      <span class="template-label">教材テンプレ</span>
-      <button class="copy-btn" onclick="copyTemplate(this)">コピー</button>
-    </div>
-    <div class="template-body">
-<p>〇〇さん、ありがとうございます！<br>受講開始日、承知しました！</p>
-<p>次のステップとして、ポータルサイトの「教材一覧」から「中学英文法教材」の説明、マニュアルの確認をお願いします🙏</p>
-<p>学習管理シートは、目安量として1日3項目で作成予定ですが、『もっとできそう！』という場合は、1日何項目できそうかお知らせいただけますでしょうか？</p>
-<p>ご希望に応じて、シートを作成させていただきます！</p>
-<p>ご不明な点があれば、お気軽にお申しつけください^^</p>
-    </div>
   </div>
 
 </div><!-- /.container -->
